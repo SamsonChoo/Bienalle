@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import LivingArrangement from './LivingArrangement'
+import AgeGroup from './AgeGroup'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <LivingArrangement />
+    <AgeGroup />
   </React.StrictMode>,
   document.getElementById('root')
 );
