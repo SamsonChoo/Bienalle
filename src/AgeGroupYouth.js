@@ -1,5 +1,5 @@
 import React from 'react';
-import './AgeGroup.css';
+import './LivingArrangement.css';
 import youth from './icons/Youth.png';
 import midlife from './icons/grey/MidLife.png';
 import elderly from './icons/grey/Elderly.png';
@@ -15,7 +15,7 @@ import {
 function AgeGroup() {
   return (
     <Router>
-      <div className="Living Arrangement">
+      <div className="Age Group">
         <div className="Header">
           Welcome User #555 to Year 2050!
         </div>
