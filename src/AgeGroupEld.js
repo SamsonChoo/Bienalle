@@ -5,6 +5,7 @@ import midlife from './icons/grey/MidLife.png';
 import elderly from './icons/Elderly.png';
 import PYouth from './AgeGroupYouth';
 import PMid from './AgeGroupMid';
+import PCap from './Capacity';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function AgeGroup() {
@@ -31,7 +32,7 @@ function AgeGroup() {
                 <li>
                   <img src={elderly}></img>
                 </li>
-                Next
+                <Link to='/capacity'>Next</Link>
               </ul>
             </div>
           </Route>
@@ -40,6 +41,9 @@ function AgeGroup() {
           </Route>
           <Route exact path='/age/midlife'>
             {PMid}
+          </Route>
+          <Route exact path='/capacity'>
+            {PCap}
           </Route>
         </Switch>
       </div>

@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import LivingArrangement from './LivingArrangement'
-import AgeGroup from './AgeGroup'
+import LivingArrangement from './LivingArrangement';
+import AgeGroup from './AgeGroup';
+import Capacity from './Capacity';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
