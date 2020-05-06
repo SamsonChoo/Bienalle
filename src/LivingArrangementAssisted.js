@@ -7,60 +7,85 @@ import nuclear from './icons/grey/Nuclear.png';
 import assisted from './icons/Assisted.png';
 import cohousing from './icons/grey/CoHousing.png';
 import multigen from './icons/grey/MultiGenerational.png';
-import PSingle from './LivingArrangementSingle'
-import PCouple from './LivingArrangementCouple'
-import PSParent from './LivingArrangementSParent'
-import PNuclear from './LivingArrangementNuclear'
-import PCohouse from './LivingArrangementCohousing'
-import PMult from './LivingArrangementMulti'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import PSingle from './LivingArrangementSingle';
+import PCouple from './LivingArrangementCouple';
+import PSParent from './LivingArrangementSParent';
+import PNuclear from './LivingArrangementNuclear';
+import PCohouse from './LivingArrangementCohousing';
+import PMult from './LivingArrangementMulti';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import PAge from './AgeGroup';
 
 function LivingArrangement() {
   return (
     <Router>
-      <div className="Living Arrangement">
-        <div className="Header">
-          Welcome User #555 to Year 2050!
-        </div>
-        <div className='SubHeader'>
-          Choose your preferred living arrangement:
-        </div>
-        <div className='options'>
-          <ul>
-            Assisted Living
-            <li><Link to='/single'><img src={single}></img></Link></li>
-            <li><Link to='/couple'><img src={couple}></img></Link></li>
-            <li><Link to='/singleparent'><img src={singleparent}></img></Link></li>
-            <li><Link to='/nuclear'><img src={nuclear}></img></Link></li>
-            <li><img src={assisted}></img></li>
-            <li><Link to='/cohousing'><img src={cohousing}></img></Link></li>
-            <li><Link to='/multigen'><img src={multigen}></img></Link></li>
-            Next
-          </ul>
-        </div>
+      <div className='Living Arrangement'>
         <Switch>
-          <Route exact path="/single">
+          <Route exact path='/living/assisted'>
+            <div className='Header'>Welcome User #555 to Year 2050!</div>
+            <div className='SubHeader'>
+              Choose your preferred living arrangement:
+            </div>
+            <div className='options'>
+              <ul>
+                Assisted Living
+                <li>
+                  <Link to='/living/single'>
+                    <img src={single}></img>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/living/couple'>
+                    <img src={couple}></img>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/living/singleparent'>
+                    <img src={singleparent}></img>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/living/nuclear'>
+                    <img src={nuclear}></img>
+                  </Link>
+                </li>
+                <li>
+                  <img src={assisted}></img>
+                </li>
+                <li>
+                  <Link to='/living/cohousing'>
+                    <img src={cohousing}></img>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/living/multigen'>
+                    <img src={multigen}></img>
+                  </Link>
+                </li>
+                <Link to='/age'>Next</Link>
+              </ul>
+            </div>
+          </Route>
+          <Route exact path='/living/single'>
             {PSingle}
           </Route>
-          <Route exact path="/couple">
+          <Route exact path='/living/couple'>
             {PCouple}
           </Route>
-          <Route exact path="/singleparent">
+          <Route exact path='/living/singleparent'>
             {PSParent}
           </Route>
-          <Route exact path="/nuclear">
+          <Route exact path='/living/nuclear'>
             {PNuclear}
           </Route>
-          <Route exact path="/cohousing">
+          <Route exact path='/living/cohousing'>
             {PCohouse}
           </Route>
-          <Route exact path="/multigen">
+          <Route exact path='/living/multigen'>
             {PMult}
+          </Route>
+          <Route exact path='/age'>
+            {PAge}
           </Route>
         </Switch>
       </div>
