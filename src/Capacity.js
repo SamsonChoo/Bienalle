@@ -2,6 +2,7 @@ import React from 'react';
 import './Capacity.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Slider from '@material-ui/core/Slider';
+import Affordable from './Affordable';
 
 const marks = [
   {
@@ -34,7 +35,14 @@ function Capacity() {
                 max={10}
                 valueLabelDisplay='on'
               />
+              <br></br>
+              <br></br>
+              <br></br>
+              <Link to='/affordable'>Next</Link>
             </div>
+          </Route>
+          <Route exact path='/affordable'>
+            {Affordable}
           </Route>
         </Switch>
       </div>

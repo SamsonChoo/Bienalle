@@ -5,6 +5,7 @@ import App from './App';
 import LivingArrangement from './LivingArrangement';
 import AgeGroup from './AgeGroup';
 import Capacity from './Capacity';
+import Affordable from './Affordable';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
