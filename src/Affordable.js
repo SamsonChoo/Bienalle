@@ -1,8 +1,8 @@
 import React from 'react';
 import './Capacity.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from './CButton';
+import Button from '@material-ui/core/Button';
+import Room from './Room';
 
 function Affordable() {
   return (
@@ -14,9 +14,20 @@ function Affordable() {
             <div className='SubHeader'>Do you want it affordable?</div>
             <div className='CapOptions'>
               <div>
-                <Button></Button>
+                <Link to='/room'>
+                  <Button variant='contained'>Yes</Button>
+                </Link>
+                <br />
+                <br />
+                <br />
+                <Link to='/room'>
+                  <Button variant='contained'>No</Button>
+                </Link>
               </div>
             </div>
+          </Route>
+          <Route exact path='/room'>
+            <Room />
           </Route>
         </Switch>
       </div>
